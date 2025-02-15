@@ -1,7 +1,7 @@
 export const BuyMeCoffeeButton = ({ url }) => {
   return (
     <div>
-      <div className="flex px-4 py-3">
+      <div className="flex px-4 py-2">
         <a 
           href={url} 
           target="_blank" 
@@ -11,7 +11,7 @@ export const BuyMeCoffeeButton = ({ url }) => {
           <span className="truncate">Buy Me a Coffee</span>
         </a>
       </div>
-      <div className="h-5 bg-[#131C24]" />
+      <div className="h-3 bg-[#131C24]" />
     </div>
   );
 }; 

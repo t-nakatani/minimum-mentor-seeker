@@ -43,7 +43,7 @@ function App() {
 
   return (
     <div
-      className="relative flex size-full min-h-screen flex-col bg-[#131C24] dark justify-between group/design-root overflow-x-hidden max-w-[480px] mx-auto"
+      className="relative flex size-full min-h-screen flex-col bg-[#131C24] dark overflow-x-hidden max-w-[480px] mx-auto"
       style={{ fontFamily: 'Lexend, "Noto Sans", sans-serif' }}
     >
       <div>

@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom';
 import './App.css'
 import { fetchPostData } from './api/mockApi'
 import { Header } from './components/Header'
 import { RequesterProfile } from './components/RequesterProfile'
 import { ContentImage } from './components/ContentImage'
 import { ReceiveButton } from './components/ReceiveButton'
+import Chat from './components/Chat';
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -41,7 +43,7 @@ function App() {
     </div>;
   }
 
-  return (
+  const HomePage = () => (
     <div
       className="relative flex size-full min-h-screen flex-col bg-[#131C24] dark overflow-x-hidden max-w-[480px] mx-auto"
       style={{ fontFamily: 'Lexend, "Noto Sans", sans-serif' }}
@@ -54,6 +56,13 @@ function App() {
       <ReceiveButton requester={postData.requester} />
     </div>
   );
+
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/chat" element={<Chat />} />
+    </Routes>
+  );
 }
 
-export default App
+export default App;

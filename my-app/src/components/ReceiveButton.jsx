@@ -1,6 +1,6 @@
 import { LessonDetails } from './LessonDetails';
 
-export const ReceiveButton = ({ requesterAddress }) => {
+export const ReceiveButton = ({ requesterAddress, requester }) => {
   return (
     <div>
       <div className="h-3 bg-[#131C24]" />
@@ -16,7 +16,7 @@ export const ReceiveButton = ({ requesterAddress }) => {
             window.open('https://example.com', '_blank', 'noopener,noreferrer');
           }}
         >
-          Receive
+          Support {requester?.name || 'Loading...'}
         </button>
       </div>
     </div>

@@ -51,7 +51,7 @@ function App() {
         <RequesterProfile requester={postData.requester} />
         <ContentImage imageUrl={postData.contentImage} />
       </div>
-      <ReceiveButton requesterAddress={postData.requesterAddress} />
+      <ReceiveButton requester={postData.requester} />
     </div>
   );
 }

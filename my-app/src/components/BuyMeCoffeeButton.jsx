@@ -1,17 +1,52 @@
-export const BuyMeCoffeeButton = ({ url }) => {
+export const BuyMeCoffeeButton = ({ url, imageUrl }) => {
   return (
     <div>
-      <div className="flex px-4 py-2">
+      <div className="h-3 bg-[#131C24]" />
+
+      {/* Feature Section */}
+      <div className="px-4">
+        {/* Expected Time */}
+        <p className="text-[#F8F9FB] text-base font-normal leading-normal pb-3 pt-1">Expected Time Commitment</p>
+        <div className="flex items-center gap-4 bg-[#131C24] min-h-14">
+          <div className="text-[#F8F9FB] flex items-center justify-center rounded-lg bg-[#29374C] shrink-0 size-10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
+              <path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z" />
+            </svg>
+          </div>
+          <p className="text-[#F8F9FB] text-base font-normal leading-normal flex-1 truncate">30 min</p>
+        </div>
+
+        {/* Communication Method */}
+        <p className="text-[#F8F9FB] text-base font-normal leading-normal pb-3 pt-1">Means of Communication</p>
+        <div className="flex items-center gap-4 bg-[#131C24] min-h-14">
+          <div className="text-[#F8F9FB] flex items-center justify-center rounded-lg bg-[#29374C] shrink-0 size-10">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256">
+              <path d="M251.77,73a8,8,0,0,0-8.21.39L208,97.05V72a16,16,0,0,0-16-16H32A16,16,0,0,0,16,72V184a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V159l35.56,23.71A8,8,0,0,0,248,184a8,8,0,0,0,8-8V80A8,8,0,0,0,251.77,73ZM192,184H32V72H192V184Zm48-22.95-32-21.33V116.28L240,95Z" />
+            </svg>
+          </div>
+          <p className="text-[#F8F9FB] text-base font-normal leading-normal flex-1 truncate">Online Meeting</p>
+        </div>
+
+        {/* Button Section */}
         <a 
           href={url} 
           target="_blank" 
-          rel="noopener noreferrer" 
-          className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-5 flex-1 bg-[#F4C753] text-[#141C24] text-base font-bold leading-normal tracking-[0.015em]"
+          rel="noopener noreferrer"
+          className="block w-full bg-[#F4C753] text-[#141C24] text-base font-bold leading-normal tracking-[0.015em] py-3 rounded-xl text-center mt-4"
         >
-          <span className="truncate">Buy Me a Coffee</span>
+          Buy Me a Coffee
         </a>
       </div>
-      <div className="h-3 bg-[#131C24]" />
+
+      {/* Image Section */}
+      <div className="mt-4">
+        <div className="w-full gap-1 overflow-hidden bg-[#131C24] @[480px]:gap-2 aspect-[3/2] rounded-xl flex">
+          <div
+            className="w-full bg-center bg-no-repeat bg-cover aspect-auto rounded-none flex-1"
+            style={{ backgroundImage: `url(${imageUrl})` }}
+          />
+        </div>
+      </div>
     </div>
   );
 }; 

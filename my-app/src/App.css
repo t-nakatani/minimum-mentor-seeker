@@ -63,3 +63,18 @@
   font-weight: bold;
   margin-bottom: 4px;
 }
+
+.receive-button {
+  display: block;
+  width: 100%;
+  background-color: #F4C753;
+  color: #141C24;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0.015em;
+  padding: 12px 0;
+  border-radius: 12px;
+  text-align: center;
+  margin-top: 16px;
+}

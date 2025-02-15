@@ -4,7 +4,7 @@ import { fetchPostData } from './api/mockApi'
 import { Header } from './components/Header'
 import { RequesterProfile } from './components/RequesterProfile'
 import { ContentImage } from './components/ContentImage'
-import { BuyMeCoffeeButton } from './components/BuyMeCoffeeButton'
+import { ReceiveButton } from './components/ReceiveButton'
 
 function App() {
   const [messages, setMessages] = useState([]);
@@ -51,7 +51,7 @@ function App() {
         <RequesterProfile requester={postData.requester} />
         <ContentImage imageUrl={postData.contentImage} />
       </div>
-      <BuyMeCoffeeButton url={postData.buyMeUrl} />
+      <ReceiveButton requesterAddress={postData.requesterAddress} />
     </div>
   );
 }

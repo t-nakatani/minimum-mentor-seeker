@@ -3,18 +3,20 @@ export const RequesterProfile = ({ requester }) => {
     <>
       <div className="flex items-center gap-4 bg-[#131C24] px-4 min-h-14">
         <div
-          className="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-fit"
+          className="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-10 w-10 shrink-0"
           style={{
             backgroundImage: `url("${requester.avatar}")`,
           }}
         />
-        <p className="text-[#F8F9FB] text-base font-normal leading-normal flex-1 truncate">
+        <p className="text-[#F8F9FB] text-base font-normal leading-normal text-left">
           {requester.name}
         </p>
       </div>
-      <p className="text-[#F8F9FB] text-base font-normal leading-normal pb-3 pt-1 px-4">
-        {requester.description}
-      </p>
+      <div className="mx-4 mt-1 mb-3 p-3 rounded-lg bg-[#29374C]">
+        <p className="text-[#F8F9FB] text-base font-normal leading-normal text-left">
+          {requester.description}
+        </p>
+      </div>
     </>
   );
 }; 
